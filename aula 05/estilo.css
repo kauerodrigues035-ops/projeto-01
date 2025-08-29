@@ -1,0 +1,8 @@
+/*crie uma fonte personalizada*/
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('caminho/para/sua/fonte.woff2') format('woff2'),
+         url('caminho/para/sua/fonte.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

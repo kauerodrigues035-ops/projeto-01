@@ -1,0 +1,81 @@
+#container{
+    width: 95%;
+    max-width: 980px;/*largura maxima*/
+height: auto;
+margin: auto;
+
+
+
+}
+#header{
+width: 100%;
+height: 84px;
+background-color: rgb(255, 255, 255);
+
+
+
+}
+figure#logo{
+
+width: 204px;
+height: 84px; 
+border-radius: 10px;
+margin: 20px auto;
+
+}
+#menu{
+width: 100%;
+height:40px ;
+background-color:rgb(221, 207, 9);
+float: right;
+text-align: center; /*alinha o texto ao centro*/
+line-height: 40px; 
+border-radius: 10px;
+
+}
+#menu a{
+color: rgb(0, 0, 0);
+margin: 0 20px;
+text-decoration: none;
+}
+/*colocar um plano de fundo da página bege*/
+body{
+    background-color: rgb(255, 230, 180);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+/*colocar a fonte em negrito*/
+h1, h2, h3, h4, h5, h6 , p{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 10px 0;
+}
+article#conteúdo{
+width:60%;
+float:left;
+height: auto;
+}
+aside#lateral{
+    width: 35%;
+    float: right;
+    height: auto;
+}
+footer#pezin{
+    width:100%;
+    height: 30px;
+    background-color: rgb(124, 123, 123);
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    clear: both; /*limpa os floats*/
+ background-color: rgb(192, 192, 192);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: rgb(255, 248, 248);
+    margin: 0;
+    padding: 0;
+
+}

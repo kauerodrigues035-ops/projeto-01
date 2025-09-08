@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 09</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <!--bootstrap icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--jquery UI-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.css"
+        integrity="sha512-3hvw+Zxkz7PNP8E+6r5RkXgPj7tWq8a6vV0lE7QJqH4U3rHj+3v3bF9c6WWvP7rE2b5H1m6K5e1m5r5m5m5mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <ul class="nav nav-pills flex-column">
+
+                    <li class="nav-link active"><a href="#">home <i class="bi bi-house"></i></a>
+                    </li>
+                    <li class="nav-link"><a href="#">reserva <i class="bi bi-tag-fill"></i></a>
+                    </li>
+
+                    <li class="nav-link"><a href="#">contato <i class="bi bi-person-rolodex"></i></a>
+                    </li>
+
+                </ul>
+
+            </div> <!--fechar  lateral  -->
+
+            <div class="col-9">
+                <div id="tela1">
+
+                    <p>aula frontend com ia com bootstraps e javascript</p>
+
+                    <span>inteligencia artificial</span>
+                    <br><br>
+                    <div id="alunos">
+
+                        <ul>
+                            <li>olavo</li>
+                            <li>clovis</li>
+                            <li>henrique</li>
+                            <li>ana</li>
+                            <li>maria</li>
+                            <li>joao</li>
+                            <li>kaue</li>
+                            <li>pedro</li>
+                            <li>paulo</li>
+                            <li>carlos</li>
+                            <li>roberto</li>
+                            <li>ricardo</li>
+                        </ul>
+                    </div> <!--fechar alunos-->
+                    <br><br>
+                    <i class="bi bi-plus-circle add" style="cursor: pointer;"></i>
+                    <i class="bi bi-dash-circle dash" style="cursor: pointer;"></i>
+                    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore iusto earum voluptatem
+                        architecto deleniti. Esse distinctio, consequatur eum ullam itaque nihil, vitae illum sit vel
+                        officiis tempore blanditiis? Quasi, repudiandae!</p>
+
+
+                </div> <!--fechar tela1-->
+                <div id="reserva">
+                    <h3 class="border-bottom pb-2">Reserva de Clientes</h3>
+                    <form action="">
+                        <label for="dtinicio">Inicio:</label>
+                        <input type="text" id="dtinicio" class="form-control mb-3" />
+
+                        <label for="dtfim">Fim:</label>
+                        <input type="text" id="dtfim" class="form-control mb-3" />
+                        <br />
+
+                        <input type="submit" value="Enviar" 
+                        id="btnEnviar" class="btn btn-danger" />
+                        
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+
+                        <button type="button" class="btn btn-link">Link</button>
+                    </form>
+                </div>
+                       
+
+        </div> <!--fechar row-->
+
+    </div> <!--fechar container-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+    </script>
+    <!--jquery UI-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
+    <!--js do bootstrap 5-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script>
+        $(function () {
+
+            var nome = "kaue";
+            console.log("ola   " + nome);
+
+            $()
+            $("#alunos").hide().fadeIn(3000);
+            $("#alunos li:even").css("color", "blue");
+            $("#alunos li:odd").css("color", "#0F0");
+            $(".add").on("click", function () {
+                $("#texto").css("font-size", "+=2px");
+            });
+            $(".dash").on("click", function () {
+                $("#texto").css("font-size", "-=2px");
+            });
+           // $("#reserva").hide();
+           
+
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

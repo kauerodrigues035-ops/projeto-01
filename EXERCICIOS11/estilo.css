@@ -1,0 +1,131 @@
+/* ===========================
+   Estilo Global
+=========================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Links */
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: #ffc107 !important;
+  }
+  
+  /* ===========================
+     Navbar
+  =========================== */
+  .navbar {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  .navbar-nav .nav-link {
+    transition: 0.3s;
+  }
+  .navbar-nav .nav-link:hover {
+    transform: scale(1.05);
+    color: #ffc107 !important;
+  }
+  
+  /* ===========================
+     Banner
+  =========================== */
+  .banner {
+    position: relative;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* ===========================
+     Seção Sobre
+  =========================== */
+  section h2 {
+    font-weight: bold;
+    color: #0d6efd;
+  }
+  section p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+  }
+  
+  /* ===========================
+     Carrossel
+  =========================== */
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+  .carousel-item {
+    transition: transform 1s ease, opacity 1s ease !important;
+  }
+  
+  /* ===========================
+     Botões
+  =========================== */
+  button, .btn {
+    transition: 0.3s ease;
+  }
+  button:hover, .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  }
+  
+  /* ===========================
+     Rodapé
+  =========================== */
+  footer {
+    background: linear-gradient(45deg, #0d6efd, #198754);
+    font-size: 0.9rem;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+  }
+  
+  footer a {
+    transition: 0.3s ease;
+  }
+  footer a:hover {
+    color: #ffc107 !important;
+    transform: scale(1.2);
+  }
+  
+  
+  /* ===========================
+     Formulários
+  =========================== */
+  form {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  input, textarea {
+    border-radius: 10px !important;
+    border: 1px solid #ced4da;
+  }
+  input:focus, textarea:focus {
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+  }
+  
+  /* ===========================
+     Animações
+  =========================== */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

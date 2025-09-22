@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fila preferencial</title>
+</head>
+<body>
+<h1>fila preferencial</h1>
+<br><br>
+voce é : <br>
+1. gestante <br>
+2. idoso <br>
+3. PCD  <br>
+4. nenhum dos anteriores <br>
+
+
+    <form action="">
+<input type="number" id="option"/><br>
+<button onclick="verificar()">verificar</button>
+    </form>
+    <script>
+        function verificar(){
+
+            var op = parseInt(document.getElementById("option").value);
+            if((op == 1) || (op == 2) || (op == 3)){
+alert('Fila preferencial!');
+            }else{
+                alert('fia comum');
+            }
+        };;
+    </script>
+</body>
+</html>

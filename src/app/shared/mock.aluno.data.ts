@@ -1,4 +1,4 @@
-import { Aluno} from "../../models/aluno.model";
+import { Aluno} from "../models/aluno.model";
 
 export const ALUNOS_MOCK: Aluno[] = [
     new Aluno(1, 'Ana Costa', 'f', 'https://randomuser.me/api/portraits/women/2.jpg', 'Angular', 9, 8.5),

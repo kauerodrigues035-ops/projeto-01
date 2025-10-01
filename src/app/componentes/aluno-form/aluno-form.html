@@ -1,0 +1,64 @@
+<div class="aluno-form">
+  <h3>📝 Cadastrar Aluno</h3>
+  
+  <div class="card">
+    <div class="card-header bg-success text-white">
+      Formulário de Cadastro
+    </div>
+    
+    <div class="card-body">
+      <form (ngSubmit)="cadastrarAluno()">
+        
+        <div class="mb-3">
+          <label class="form-label">Nome *</label>
+          <input type="text" class="form-control" 
+                 [(ngModel)]="aluno().nome" name="nome" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Sexo *</label>
+          <select class="form-control" [(ngModel)]="aluno().sexo" name="sexo" required>
+            <option value="">Selecione...</option>
+            <option value="m">Masculino</option>
+            <option value="f">Feminino</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Foto URL</label>
+          <input type="url" class="form-control" 
+                 [(ngModel)]="aluno().foto" name="foto">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Disciplina *</label>
+          <input type="text" class="form-control" 
+                 [(ngModel)]="aluno().disciplina" name="disciplina" required>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label class="form-label">Nota 1 *</label>
+              <input type="number" class="form-control" 
+                     [(ngModel)]="aluno().nota1" name="nota1" 
+                     min="0" max="10" step="0.1" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label class="form-label">Nota 2 *</label>
+              <input type="number" class="form-control" 
+                     [(ngModel)]="aluno().nota2" name="nota2"
+                     min="0" max="10" step="0.1" required>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">
+          Cadastrar Aluno
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

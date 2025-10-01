@@ -1,53 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div class="container  mt-4">
-    <h2>Testando nosso Model Aluno</h2>
-    <!--sintaxe modera @if em vez de ng*if-->
+    <div class="container-fluid">
+  <header class="bg-primary text-white text-center py-4 mb-4">
+    <h1>🎯 Sistema de Gestão de Alunos</h1>
+    <p class="mb-0">Agora com formulário!</p>
+  </header>
 
-    @if (aluno.length > 0){
-
-    <p>temos {{alunosteste.length}} alunos cadastrados</p>
-
-    @if (alunos[0]; as primeiroaluno){
-
-
-
-    <div class="card" style="width: 300px;">
-      <img src="{{primeiroaluno.foto}}" class="card-img-top" alt="Foto do Aluno">
-      <div class="card-body">
-        <h5 class="card-title">{{primeiroaluno.nome }}</h5>
-        <p class="card-text">
-
-          <strong>Nota 1:</strong> {{primeiroaluno.nota1}} <br>
-          <strong>Nota 2:</strong> {{primeiroaluno.nota2}} <br>
-          <strong>Média:</strong> {{primeiroaluno.media }} <br>
-          <span class="badge" [class.bg-success]="alunoTeste.situacao === 'Aprovado'"
-            [class.bg-danger]="alunoTeste.situacao === 'Reprovado'">
-            {{primeiroaluno.situacao}}
-          </span>
-        </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <app-aluno-form 
+          [aluno]="aluno()" 
+          (onSubmit)="adicionarAluno()">
+        </app-aluno-form>
+      </div>
+      
+      <div class="col-md-8">
+        <app-aluno-list [alunos]="alunos"></app-aluno-list>
       </div>
     </div>
-
-  </div>  <!--fecha o container do bootstrap-->
-
-    }
-  } @else {
-<div class="alert alert-waring" role="alert">
-  nenhum aluno cadastrado 
+  </div>
 </div>
-  };
-
-
-
-
+  </div><!--fecha o container do bootstrap-->
 
 </body>
 

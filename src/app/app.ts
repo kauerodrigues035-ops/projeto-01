@@ -1,25 +1,27 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Aluno } from '../models/aluno.model';
-import { AlunoServiceTs } from './serices/aluno.service.ts';
+import { Aluno } from './models/aluno.model';
+import { AlunoServiceTs } from './services/aluno.service'
+import { AlunoList } from './components/aluno-list'
+import { AlunoForm } from './componentes/aluno-form/aluno-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, AlunoList, AlunoForm],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
-  alunos: Aluno [] =[];
- constructor(private alunoService: AlunoServiceTs){}
-ngOnInit(){
-
-this.alunos = this.alunoService.obterAlunos()();
-
-}
-  
- 
-
-
-
+export class App implements OnInit {
+  aluno = signal<Aluno>(new Aluno());
+  alunos: Aluno[] = [];
+  constructor(private alunoService: AlunoServiceTs) { }
+  //ngOnInit- método que roda quando o componente é inicializado
+  ngOnInit(): void {
+    //obter a lista de alunos do serviço
+    this.alunos = this.alunoService.obterAlunos()();
+  }
+  adicionarAluno(): void {
+    console.log('Aluno a ser cadastrado:', this.aluno());
+  }
 }

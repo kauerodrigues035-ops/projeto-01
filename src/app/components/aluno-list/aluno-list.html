@@ -1,0 +1,33 @@
+<div class="aluno-list">
+  <h3>🎓 Lista de Alunos</h3>
+  
+  @if (alunos.length === 0) {
+    <div class="alert alert-info">Nenhum aluno cadastrado.</div>
+  }
+
+  <div class="row">
+    @for (aluno of alunos; track trackById($index, aluno)) {
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow-sm">
+          <img [src]="aluno.foto" [alt]="aluno.nome" 
+               class="card-img-top" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">{{ aluno.nome }}</h5>
+            <p class="card-text">
+              <strong>Disciplina:</strong> {{ aluno.disciplina }}<br>
+              <strong>Notas:</strong> {{ aluno.nota1 }} | {{ aluno.nota2 }}<br>
+              <strong>Média:</strong> {{ aluno.media.toFixed(1) }}
+            </p>
+          </div>
+          <div class="card-footer">
+            <span class="badge" 
+                  [class.bg-success]="aluno.situacao === 'Aprovado'"
+                  [class.bg-danger]="aluno.situacao === 'Reprovado'">
+              {{ aluno.situacao }}
+            </span>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
